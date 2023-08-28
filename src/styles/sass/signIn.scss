@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{ font-family: 'Open Sans', sans-serif;}
+
+.body{
+    background-image: url('https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/Una-nave_vb5sc9.jpg');
+    background-position-x: -250px;
+    margin:5%;
+    &__main{
+        text-align: end;
+        &__article{
+            display: flex;
+            justify-content: center;
+            color:rgb(255, 255, 255);
+            text-align: center;
+            &--ct{ font-weight: 700; font-size: 60px;}
+            &__icon{
+                position: absolute;
+                padding: 7px 5px 5px 10px;
+                img{ width: 25px;}
+            }
+            &__card{
+                background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+                border-radius: 20px;
+                transition: all .3s;
+                width: 90%;
+                &:hover{
+                    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+                }
+                &__form{
+                    background: linear-gradient(145deg, rgb(72, 76, 91), rgb(20, 20, 20));
+                    border-radius: 20px;
+                    transition: all .2s;
+                    padding: 50px;
+                    height: 480px;
+                    text-align: center;
+                    &:hover{
+                        transform: scale(0.98);
+                        border-radius: 20px;
+                    }
+                    .form-control{
+                        height: 40px;
+                        border-radius: 1rem;
+                        outline-color: #5b42f3;
+                        padding-left: 40px;
+                        &::placeholder{ font-weight: 600;} 
+                    }
+                    button{
+                        background: linear-gradient(144deg,#af40ff,#5b42f3 50%,#00ddeb);
+                        border: none;
+                        height: 46px;
+                        padding: 0 25px 0 15px;
+                        border-radius: 1rem;
+                        width: 85%;
+                        color: white;
+                        font-weight: 700;
+                        &:hover{
+                            background: linear-gradient(144deg,#6203a6,#1b01bf 50%,#02a1ac);
+                        }
+                    }
+                    #negrilla{
+                        color:#b667c7;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body class="body">
+    <main class="body__main">
+        <article class="body__main__article col-md-6">
+            <div class="body__main__article__card">
+                <form id="formulario" class="body__main__article__card__form" onsubmit="capturarDatos(event)";>
+                    <h1 class="body__main__article--ct pb-4 mt-3 sd">¡Sign In!</h1>
+                    <div class="input mb-4 d-flex">
+                        <span class="body__main__article__icon"><img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939949/cel_qy1lxk.jpg" alt=""></span>
+                        <input name="phone" type="number" class="form-control" id="phone" aria-describedby="Phone" placeholder="Phone" required>
+                    </div>
+                    <div class="input mb-4 d-flex">
+                        <span class="body__main__article__icon"><img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939947/lock2_ql4tku.jpg" alt=""></span>
+                        <input name="Password" type="password" class="form-control" id="Password" placeholder="Password" required>
+                    </div>
+                    
+                    <button type="submit" id="submit">Sign Up for Free</button>
+                    <p><b id="negrilla">Do you have an account? <a href="/SignUp.html">¡Sign Up!</a></b></p>
+                </form>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

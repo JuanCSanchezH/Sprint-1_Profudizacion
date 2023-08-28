@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+.body {
+  background: url("https://res.cloudinary.com/di90urdxw/image/upload/v1692939947/Fondo-de-pantalla-WhatsApp-Dark_xdnxfs.jpg");
+  margin: 5%;
+}
+.body__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body__main__section {
+  color: rgb(222, 222, 222);
+  text-align: center;
+}
+.body__main__section--ct {
+  font-weight: 700;
+  font-size: 60px;
+}
+.body__main__article {
+  display: flex;
+  justify-content: center;
+}
+.body__main__article__form {
+  border-radius: 49px;
+  background: linear-gradient(145deg, rgb(102, 109, 135), rgb(43, 46, 57));
+  box-shadow: 29px 29px 100px #0d0d0d, -29px -29px 100px #353535;
+  padding: 50px;
+  width: 70%;
+  height: 480px;
+  text-align: center;
+}
+.body__main__article__form .form-control {
+  height: 40px;
+  border-radius: 1rem;
+  outline-color: #5b42f3;
+}
+.body__main__article__form .form-control::placeholder {
+  font-weight: 600;
+}
+.body__main__article__form textarea {
+  color: white;
+  height: 45px;
+}
+.body__main__article__form .wave-group {
+  position: relative;
+  margin-left: 7px;
+}
+.body__main__article__form .wave-group textarea {
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+}
+.body__main__article__form .wave-group textarea:focus {
+  outline: none;
+}
+.body__main__article__form .wave-group .label {
+  color: #cb83ff;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+.body__main__article__form .wave-group .label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * 0.05s);
+}
+.body__main__article__form .wave-group textarea:focus ~ label .label-char,
+.body__main__article__form .wave-group textarea:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #64d5dd;
+}
+.body__main__article__form .wave-group .bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.body__main__article__form .wave-group .bar:before, .body__main__article__form .wave-group .bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #64d5dd;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.body__main__article__form .wave-group .bar:before {
+  left: 50%;
+}
+.body__main__article__form .wave-group .bar:after {
+  right: 50%;
+}
+.body__main__article__form .wave-group textarea:focus ~ .bar:before,
+.body__main__article__form .wave-group textarea:focus ~ .bar:after {
+  width: 50%;
+}
+.body__main__article__form button {
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: none;
+  height: 46px;
+  padding: 0 25px 0 15px;
+  border-radius: 1rem;
+  width: 85%;
+  color: white;
+  font-weight: 700;
+}
+.body__main__article__form button:hover {
+  background: linear-gradient(144deg, #6203a6, #1b01bf 50%, #02a1ac);
+}
+.body__main__article__form p {
+  color: rgb(176, 175, 175);
+  font-size: xx-small;
+  text-align: center;
+  margin-top: 10px;
+}
+.body__main__article__form p #negrilla {
+  color: #b667c7;
+  font-weight: bold;
+  font-size: x-small;
+}
+
+/*# sourceMappingURL=signUp.css.map */

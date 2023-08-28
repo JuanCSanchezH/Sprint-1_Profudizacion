@@ -1,0 +1,65 @@
+@use './textArea' as tA;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+*{ font-family: 'Open Sans', sans-serif;}
+
+.body{
+    background: url('https://res.cloudinary.com/di90urdxw/image/upload/v1692939947/Fondo-de-pantalla-WhatsApp-Dark_xdnxfs.jpg');
+    // background-position-x: -1000px;
+    margin:5%;
+    &__main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__section{
+            color:rgb(222, 222, 222);
+            text-align: center;
+            &--ct{ font-weight: 700; font-size: 60px;}
+        }
+        &__article{
+            display: flex;
+            justify-content: center;
+            &__form{
+                border-radius: 49px;
+                background: linear-gradient(145deg, rgb(102, 109, 135), rgb(43,46,57));
+                box-shadow:  29px 29px 100px #0d0d0d,
+                            -29px -29px 100px #353535;
+                padding: 50px;
+                width: 70%;
+                height: 480px;
+                text-align: center;
+                .form-control{
+                    height: 40px;
+                    border-radius: 1rem;
+                    outline-color: #5b42f3;
+                    &::placeholder{ font-weight: 600;} 
+                }
+                @include tA.textArea();
+                button{
+                    background: linear-gradient(144deg,#af40ff,#5b42f3 50%,#00ddeb);
+                    border: none;
+                    height: 46px;
+                    padding: 0 25px 0 15px;
+                    border-radius: 1rem;
+                    width: 85%;
+                    color: white;
+                    font-weight: 700;
+                    &:hover{
+                        background: linear-gradient(144deg,#6203a6,#1b01bf 50%,#02a1ac);
+                    }
+                }
+                p{
+                    color:rgb(176, 175, 175);
+                    font-size: xx-small;
+                    text-align: center;
+                    margin-top: 10px;
+                    #negrilla{
+                        color:#b667c7;
+                        font-weight: bold;
+                        font-size: x-small;
+                    }
+                }
+            }
+        }
+    }
+}

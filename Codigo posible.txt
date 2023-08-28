@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#009688 0%, #009688 130px,#d9dbd5 130%, #d9dbd5 100%);
+    .container{
+        position: relative;
+        width: 1396px;
+        max-width: 95%;
+        height: calc(100vh - 40px);
+        background: #fff;
+        box-shadow: 0 1px 1px 0 rgba(0,0,0,0.06),0 2px 5px 0 rgba (0,0,0,0.06);
+        display: flex;
+        &__leftSide{
+            position: relative;
+            flex: 30%;
+            background: #fff;
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+            &__header{
+                position: relative;
+                width: 100%;
+                height: 60px;
+                background: #ededed;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 15px;
+                .usering{
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    &--cover{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        object-fit: cover;                    
+                    }
+                }
+                .nav_icons {
+                    display: flex;
+                    list-style: none;
+                    .li{
+                        display: flex;
+                        list-style: none;
+                        cursor: pointer;
+                        color: #51585c;
+                        font-size: 1.5em;
+                        margin-left: 22px;
+                    }
+                }
+                .search_chat{
+                    position: relative;
+                    width: 100%;
+                    height: 50px;
+                    background: #f6f6f6;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 15px;
+                    div{
+                        width: 100%;
+                        ion-icon{
+                            position: absolute;
+                            left: 30px;
+                            top: 14px;
+                            font-size: 1.2em;                        
+                        }
+                        input{
+                            width: 100%;
+                            outline: none;
+                            border: none;
+                            background: #fff;
+                            padding: 6px;
+                            height: 38px;
+                            border-radius: 30px;
+                            font-size: 14px;
+                            padding-left: 40px;
+                            ::placeholder{
+                                color: #bbb;
+                            }
+                        }
+                    }
+                }
+                .chatlist{
+                    position: relative;
+                    height: calc(100% - 110px);/*60 +50=110*/
+                    overflow-y: auto;
+                    .block{
+                        position: relative;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 15px;
+                        border: 1px solid rgba(0,0,0,0.06);
+                        cursor: pointer;
+                        .imgbx{
+                            position: relative;
+                            width: 50px;
+                            height: 50px;
+                            overflow: hidden;
+                            border-radius: 50%;
+                        }
+                        .details{
+                            position: relative;
+                            width: 100%;
+                            .listHead{
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 5px;
+                                h4{
+                                    font-size: 1.1em;
+                                    font-weight: 600;
+                                    color: #111;
+                                }
+                                .time{
+                                    font-size: 0.75em;
+                                    color:#aaa;
+                                }
+                            }
+                            .message_p{
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                p{
+                                    color: #aaa;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 1;
+                                    font-size: 0.9em;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                                b{
+                                    background: #06d755; 
+                                    color: #fff;
+                                    min-width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 0.75em;
+                                }               
+                            }
+                        }
+                    }
+                    .block.unread{
+                        color: #aaa;
+                    }          
+                }
+            }
+        }
+        &__rightSide{
+            position: relative;
+            flex: 70%;
+            background: #e5ddd5;
+            ::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url ();
+                opacity: 0.06;
+                flex: 70%;
+                background: #f00;
+            }    
+        }   
+        // &__rightSide::before{
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        //     height: 100%;
+        //     background: url ();
+        //     opacity: 0.06;
+        //     flex: 70%;
+        //     background: #f00;
+        // }
+    }
+}
+
+
+
+<div class="container">
+        <div class="container__leftSide">
+            <div class="container__leftSide__header">
+                <div class="usering">
+                    <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien1_g7qqr4.jpg" class="usering--cover">
+                </div>
+                <ul class="nav_icons">
+                    <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+                <div class="search_chat">
+                    <div>
+                        <input type="text" placeholder="Search or start a new chat">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>                    
+                </div>
+                <div class="chatlist">
+                    <div class="block">
+                        <div class="imgbx"><img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt=""></div>
+                        <div class="details">
+                            <div class="listHead">
+                                <h4>Mojamed</h4>
+                                <p class="time">10:56</p>
+                            </div>
+                            <div class="message_p">
+                                <p>Noseeeeeeeeeeee</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block unread">
+                        <div class="imgbx"><img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien3_f1flgb.jpg" width="100%" alt=""></div>
+                        <div class="details">
+                            <div class="listHead">
+                                <h4>Mojamed</h4>
+                                <p class="time">10:56</p>
+                            </div>
+                            <div class="message_p">
+                                <p>Noseeeeeeeeeeee</p>
+                                <b>1</b>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container__rightSide">
+            <div class="container__leftSide__header">
+                <div class="usering">
+                    <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien1_g7qqr4.jpg" class="usering--cover">
+                </div>
+                <ul class="nav_icons">
+                    <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
