@@ -320,20 +320,27 @@ body {
   padding: 10px;
   border-radius: 10px;
   max-width: 70%;
+  color: white;
 }
 .main__rightSide .message.received {
-  background-color: #dcf8c6;
+  background-color: #2e383d;
+  box-shadow: 8px 8px 20px #bebebe, -8px -8px 20px #bebebe;
   text-align: left;
   align-self: flex-start;
 }
 .main__rightSide .message.sent {
-  background-color: #e1ffc7;
+  background-color: #146858;
+  box-shadow: 8px 8px 20px #bebebe, -8px -8px 20px #bebebe;
   text-align: right;
   align-self: flex-end;
 }
+.main__rightSide .message-content p {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
 .main__rightSide .message .timestamp {
-  font-size: 12px;
-  color: #888;
+  font-size: 11px;
+  color: #b6b6b6;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 0) {

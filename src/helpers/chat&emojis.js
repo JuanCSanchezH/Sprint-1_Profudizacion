@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { get } from "../script/api.js";
 const API_EMOJIS = 'https://emoji-api.com/emojis?access_key=9541d7989b4bd4c1b6deb5880eaca00d930cb738';
 
 const emojiSelectorIcon = document.getElementById('emojiSelectorIcon');
@@ -22,17 +22,13 @@ emojiSelectorIcon.addEventListener('click', async () => {
 
 
 async function getEmojis(){
-    try {
-        const response = await axios.get(API_EMOJIS);
-        const emojiData = []
-        response.data.forEach(emoji => {
-            if(response.data.indexOf(emoji) <= response.data.length/4) emojiData.push(emoji);
-        })
-        return emojiData;
-    } catch (error) {
-        console.error('Error fetching products:', error);
-        return [];
-    }
+
+    const emojiData = await get(API_EMOJIS);
+    const emojiDataFraction = [];
+    emojiData.forEach(emoji => {
+        if(emojiData.indexOf(emoji) <= emojiData.length/4) emojiDataFraction.push(emoji);
+    })
+    return emojiDataFraction;
 }
 
 emojiSearch.addEventListener('keyup', e => {
