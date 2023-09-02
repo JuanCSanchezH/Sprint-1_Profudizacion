@@ -30,5 +30,35 @@
       "dateHour": "",
       "id": 3
     }
+  ],
+
+  "conversaciones": [
+    {
+      "id": 1,
+      "participantes": [1, 2]
+    }
+  ],
+  "mensajes": [
+    {
+      "id": 1,
+      "conversacionId": 1,
+      "usuarioId": 1,
+      "contenido": "Hola, ¿cómo estás?",
+      "fecha": "2023-08-31T10:00:00"
+    },
+    {
+      "id": 2,
+      "conversacionId": 1,
+      "usuarioId": 2,
+      "contenido": "¡Hola! Estoy bien, ¿y tú?",
+      "fecha": "2023-08-31T10:05:00"
+    },
+    {
+      "id": 3,
+      "conversacionId": 1,
+      "usuarioId": 1,
+      "contenido": "También estoy bien, gracias.",
+      "fecha": "2023-08-31T10:10:00"
+    }
   ]
 }
