@@ -9,33 +9,15 @@
       "info": "info",
       "dateHour": "",
       "id": 1
-    },
-    {
-      "name": "Tortuga voladora",
-      "phone": "3054475955",
-      "password": "sjadjh1212",
-      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.adslzone.net%2Fcomo-se-hace%2Fphotoshop%2Fquitar-fondo-imagen%2F&psig=AOvVaw1fCJhi6AYEKwfc6XdL42t9&ust=1693526960209000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMiU9NvNhYEDFQAAAAAdAAAAABAD",
-      "flag": false,
-      "info": "The best",
-      "dateHour": "",
-      "id": 2
-    },
-    {
-      "name": "Mario",
-      "phone": "75819274092371",
-      "password": "fajdkadk3",
-      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.adslzone.net%2Fcomo-se-hace%2Fphotoshop%2Fquitar-fondo-imagen%2F&psig=AOvVaw1fCJhi6AYEKwfc6XdL42t9&ust=1693526960209000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCMiU9NvNhYEDFQAAAAAdAAAAABAD",
-      "flag": false,
-      "info": "dalsjdkad",
-      "dateHour": "",
-      "id": 3
     }
   ],
-
   "conversaciones": [
     {
       "id": 1,
-      "participantes": [1, 2]
+      "participantes": [
+        1,
+        2
+      ]
     }
   ],
   "mensajes": [

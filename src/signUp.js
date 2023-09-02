@@ -2,12 +2,13 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import './styles/css/signUp.css'
 import '../node_modules/sweetalert2/dist/sweetalert2.min.css'
+import Swal from '../node_modules/sweetalert2/src/sweetalert2.js'
 import {create, get} from './script/api.js'
 
 const USERS_ENPOINT = 'http://localhost:3000/users';
 
-window.catchingData = async function catchingData() {  //Se le asigna al objeto window para que el onclick pueda acceder a la información
-	
+window.catchingData = async function catchingData(event) {  //Se le asigna al objeto window para que el onclick pueda acceder a la información
+	event.preventDefault();
     const phone = document.getElementById('phone').value;
 
 	const users = await get(USERS_ENPOINT);
@@ -36,13 +37,15 @@ window.catchingData = async function catchingData() {  //Se le asigna al objeto 
 			icon: 'success',
 			confirmButtonText: 'Cool'
 		})
+		event.preventDefault();
+	}else {
+		Swal.fire({
+			title: 'Ups!',
+			text: 'Your number phone is already registered',
+			icon: 'error',
+			confirmButtonText: 'Cool'
+		})
+		event.preventDefault();
 	}
-
-	Swal.fire({
-		title: 'Ups!',
-		text: 'Your number phone is already registered',
-		icon: 'error',
-		confirmButtonText: 'Cool'
-	})
 }
 

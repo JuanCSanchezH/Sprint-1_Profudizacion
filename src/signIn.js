@@ -4,21 +4,14 @@ import './styles/css/signIn.css'
 import '../node_modules/sweetalert2/dist/sweetalert2.min.css'
 import Swal from '../node_modules/sweetalert2/src/sweetalert2.js'
 import {get} from "./script/api.js"
+
 const ENDPOINT_USERS = "http://localhost:3000/users"
-const elements = await get(ENDPOINT_USERS)
-console.log(elements)
-
-
-const Formulario = document.getElementById("formulario")
-const BotonEnviar = document.getElementById("submit")
-
+let realResultPhone = false;
 
 window.capturarDatos = async function capturarDatos(event) {
    
     const password = document.getElementById("Password").value;
     const phone = document.getElementById("phone").value;
-   
-
 
     if (password ==""&& phone =="") {
         Swal.fire({
@@ -47,21 +40,23 @@ window.capturarDatos = async function capturarDatos(event) {
             })
             event.preventDefault()
         } else {
+            event.preventDefault();
             const foundNumber = await findNumber(phone);
             foundNumber ? console.log("User found") : console.log("UserNotFound");
-        }
-        event.preventDefault()
-        
-        
-    }
-        
-    }
-    
-    async function findNumber(phone){
-        const usersArray = await get(ENDPOINT_USERS);
-        usersArray.forEach(user, ()=>{
-            if(user.phone ===phone) return true;
-            else return false;
 
-        })
+            if(foundNumber){
+
+            }
+        }
     }
+}
+    
+async function findNumber(phone){
+    const usersArray = await get(ENDPOINT_USERS);
+    usersArray.forEach(user =>{
+        const result = (user.phone == phone) ?  true : false;
+        if(result) realResultPhone = result;
+        // else return false;
+    })
+    return realResultPhone;
+}
