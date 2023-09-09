@@ -10,7 +10,23 @@
         <section class="main__leftSide">
             <div class="main__leftSide__header">
                 <figure class="main__leftSide__header--fig">
-                    <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien1_g7qqr4.jpg" width="100%" alt="">
+                    <a href="" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">  <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien1_g7qqr4.jpg" width="100%" alt=""></a>
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                      <div class="offcanvas-header">
+                        <button type="button" class="offcanvas-header--close" data-bs-dismiss="offcanvas" aria-label="Close"> <img width="100%"    src="https://res.cloudinary.com/dpc1vrbek/image/upload/v1693712382/proximo_1_fewnix.png" alt="" srcset=""></button>
+                        <h5 class="offcanvas-header--title" id="offcanvasScrollingLabel">Perfil</h5>
+                      </div>
+                      <div class="offcanvas-body">
+                        <!-- <div class="mb-3">
+                            <label for="formFile" class="form-label">Default file input example</label>
+                            <input class="form-control" type="file" id="formFile">
+                          </div> -->
+                          <div class="offcanvas-body__cont">
+                            <label for="formFile" class="form-label offcanvas-body__cont__changeimg"><b>Click to upload</b></label>
+                            <input class="form-control" type="file" id="formFile" hidden>
+                          </div>
+                      </div>
+                    </div>
                 </figure>
             </div>
             <div class="main__leftSide__search">
@@ -18,6 +34,9 @@
                     <span class="main__leftSide__w-box--icon"><img src="https://res.cloudinary.com/di90urdxw/image/upload/v1693026360/buscar_ukttqz.png" width="100%" alt=""></span>
                     <input class="main__leftSide__w-box--input" type="text" placeholder="Search or start a new chat">
                 </div>
+            </div>
+            <div class="main__leftSide__createConversation">
+                <button type="button" onclick="openUserList()">Crear conversacion</button>
             </div>
             <div class="main__leftSide__chatList">
                 <div class="main__leftSide__chatList__chat">
@@ -35,141 +54,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="main__leftSide__chatList__chat">
-                    <figure class="main__leftSide__chatList__chat--fig">
-                        <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg" width="100%" alt="">
-                    </figure>
-                    <div class="main__leftSide__chatList__chat__info">
-                        <div class="main__leftSide__chatList__chat__info--sup">
-                            <h3></h3>
-                            <p></p>
-                        </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <span></span>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <article class="main__rightSide">
@@ -180,67 +64,7 @@
                 <button type="button" class="main__rightSide__header--btn"><img src="" alt=""></button>
             </div>
             
-            <div class="chat">
-                <div class="message received">
-                    <div class="message-content">
-                        <p>Hola, ¿cómo estás? ----saaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                        <span class="timestamp">10:30 AM</span>
-                    </div>
-                </div>
-                <div class="message sent">
-                    <div class="message-content">
-                        <p>Hola, estoy bien, ¿y tú?</p>
-                        <span class="timestamp">10:35 AM</span>
-                    </div>
-                </div>
-                <div class="message received">
-                    <div class="message-content">
-                        <p>Hola, ¿cómo estás?</p>
-                        <span class="timestamp">10:30 AM</span>
-                    </div>
-                </div>
-                <div class="message sent">
-                    <div class="message-content">
-                        <p>Hola, estoy bien, ¿y tú?</p>
-                        <span class="timestamp">10:35 AM</span>
-                    </div>
-                </div>
-                <div class="message received">
-                    <div class="message-content">
-                        <p>Hola, ¿cómo estás?</p>
-                        <span class="timestamp">10:30 AM</span>
-                    </div>
-                </div>
-                <div class="message sent">
-                    <div class="message-content">
-                        <p>Hola, estoy bien, ¿y tú?</p>
-                        <span class="timestamp">10:35 AM</span>
-                    </div>
-                </div>
-                <div class="message received">
-                    <div class="message-content">
-                        <p>Hola, ¿cómo estás?</p>
-                        <span class="timestamp">10:30 AM</span>
-                    </div>
-                </div>
-                <div class="message sent">
-                    <div class="message-content">
-                        <p>Hola, estoy bien, ¿y tú?</p>
-                        <span class="timestamp">10:35 AM</span>
-                    </div>
-                </div>
-                <div class="message received">
-                    <div class="message-content">
-                        <p>Hola, ¿cómo estás?</p>
-                        <span class="timestamp">10:30 AM</span>
-                    </div>
-                </div>
-                <div class="message sent">
-                    <div class="message-content">
-                        <p>Hola, estoy bien, ¿y tú?</p>
-                        <span class="timestamp">10:35 AM</span>
-                    </div>
-                </div>  
+            <div class="chat" id="chat">
                 <!-- Agrega más mensajes aquí -->
             </div>
             <div class="main__rightSide__chatBox">
@@ -272,8 +96,8 @@
 
                         <!-- chat form -->
                         <form action="">
-                            <input type="text" name="" id="">
-                            <button type="submit">Send <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1693093462/paper-plane-solid_p3bxeu.svg" alt=""></button>
+                            <input type="text" name="" id= "inputSendMessage">
+                            <button type="button" onclick="sendMessage()">Send <img src="https://res.cloudinary.com/di90urdxw/image/upload/v1693093462/paper-plane-solid_p3bxeu.svg" alt=""></button>
                         </form>
                     </div>
                 </div>

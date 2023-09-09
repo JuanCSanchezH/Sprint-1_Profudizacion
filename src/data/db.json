@@ -1,23 +1,104 @@
 {
   "users": [
     {
-      "name": "name",
-      "phone": 12434512,
-      "password": "password",
-      "image": "image",
+      "name": "Predator",
+      "phone": "3107777777",
+      "password": "12345",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939949/alien7_r5oidk.jpg",
       "flag": false,
-      "info": "info",
+      "info": "Gloptrak zyblonk vrothar shalorin, zenthraquix klovnar yibludar",
       "dateHour": "",
       "id": 1
+    },
+    {
+      "name": "Klingo",
+      "phone": "3005555555",
+      "password": "12345",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939949/alien6_wugzla.jpg",
+      "flag": false,
+      "info": "Groxian flibberglab zorkin jorvadak trilithium",
+      "dateHour": "",
+      "id": 2
+    },
+    {
+      "name": "Anya",
+      "phone": "3606666666",
+      "password": "123",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939949/alien5_xlevlv.jpg",
+      "flag": false,
+      "info": "Klartix galorvex lumbrax. ¡Fliplorx zintix crubrak!",
+      "dateHour": "",
+      "id": 3
+    },
+    {
+      "name": "Retsu",
+      "phone": "3808080808",
+      "password": "123",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939949/alien4_khivxr.jpg",
+      "flag": false,
+      "info": "¡Extravix glorfendix strazplik!",
+      "dateHour": "",
+      "id": 4
+    },
+    {
+      "name": "Groxian",
+      "phone": "0000000000",
+      "password": "321",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien3_f1flgb.jpg",
+      "flag": false,
+      "info": "Szeretem a magyar kultúrát és a gasztronómiát",
+      "dateHour": "",
+      "id": 5
+    },
+    {
+      "name": "Idunn",
+      "phone": "2192856429",
+      "password": "Idunn219",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien2_uqitjh.jpg",
+      "flag": false,
+      "info": "Mulțumesc pentru ajutor",
+      "dateHour": "",
+      "id": 6
+    },
+    {
+      "name": "Zaylor",
+      "phone": "111111111",
+      "password": "hola",
+      "image": "https://res.cloudinary.com/di90urdxw/image/upload/v1692939948/alien1_g7qqr4.jpg",
+      "flag": false,
+      "info": "אַלץ איז ניט אַלץ איזניט",
+      "dateHour": "",
+      "id": 7
     }
   ],
   "conversaciones": [
     {
-      "id": 1,
       "participantes": [
         1,
         2
-      ]
+      ],
+      "id": 1
+    },
+    {
+      "participantes": [
+        4,
+        2
+      ],
+      "id": 3
+    },
+    {
+      "participantes": [
+        3,
+        2
+      ],
+      "id": 4
+    },
+    {
+      "participantes": [
+        7,
+        2
+      ],
+      "id": 5
     }
   ],
   "mensajes": [
@@ -41,6 +122,41 @@
       "usuarioId": 1,
       "contenido": "También estoy bien, gracias.",
       "fecha": "2023-08-31T10:10:00"
+    },
+    {
+      "conversacionId": 3,
+      "usuarioId": 4,
+      "contenido": "kdasjdaklsjdlajsd",
+      "fecha": "2023-09-06T05:21:03.574Z",
+      "id": 6
+    },
+    {
+      "conversacionId": 4,
+      "usuarioId": 3,
+      "contenido": "Por quéeeeeeeee aiudaaaa",
+      "fecha": "2023-09-06T05:26:26.299Z",
+      "id": 7
+    },
+    {
+      "conversacionId": 5,
+      "usuarioId": 2,
+      "contenido": "juaaaaaaaaaa",
+      "fecha": "2023-09-06T12:17:53.187Z",
+      "id": 8
+    },
+    {
+      "conversacionId": 5,
+      "usuarioId": 7,
+      "contenido": "NOOOOOOOOOOOOOOOO",
+      "fecha": "2023-09-06T12:17:53.187Z",
+      "id": 8
+    },
+    {
+      "conversacionId": 1,
+      "usuarioId": 2,
+      "contenido": "Ya funciona esta vaina",
+      "fecha": "2023-09-09T05:29:46.176Z",
+      "id": 9
     }
   ]
 }

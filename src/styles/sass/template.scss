@@ -29,6 +29,56 @@ body{
                 width: 50px;
                 margin: 15px;
                 img{border-radius: 50px;}
+               
+                .offcanvas-header {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    background: linear-gradient(144deg,#af40ff,#5b42f3 50%,#00ddeb);
+                    height: 80px;
+                    &--close {
+                        border:none;
+                        background: none;
+                        width: 35px;
+                    }
+                    &--title {
+                        color:white;
+                        margin-bottom: 0 !important;
+                        margin-left: 15px;
+                    }
+
+                }
+                .offcanvas-body {
+                    background: linear-gradient(145deg, rgb(72, 76, 91), rgb(20, 20, 20));
+                   
+                    &__cont {
+                        margin: 20px;
+                        display: flex;
+                        justify-content: center;
+                        &__changeimg {
+                            
+                            background-color: #c4cee0;
+                            width: 190px;
+                            height: 190px;
+                            display: block;
+                            border-radius: 100px;
+                            text-align: center;
+                            padding-top: 10px;
+                            transition: 0.1s;
+                            b{display: none;}
+                            &:hover{                                
+                                background-color: #919b9e;
+                                background-image: url('https://res.cloudinary.com/dhhyc88td/image/upload/v1693758796/camera_nawsty.png');
+                                background-repeat: no-repeat;
+                                background-position-x: 80px;
+                                background-position-y: 70px;
+                                b{display: block; padding-top: 90px; color: white;}
+                            }
+                        }
+
+                    }
+
+                }
             }
         }
 
@@ -147,7 +197,7 @@ body{
             border-radius: 10px;
             max-width: 70%;
             color: white;
-            &.received {    
+            &.recieved {    
                 background-color: #2e383d;
                 box-shadow:  8px 8px 20px #bebebe,
                             -8px -8px 20px #bebebe;
@@ -156,7 +206,7 @@ body{
             }
 
             &.sent {
-                background-color: #146858;
+                background: linear-gradient(144deg,#af40ff,#5b42f3);
                 box-shadow:  8px 8px 20px #bebebe,
                             -8px -8px 20px #bebebe;
                 text-align: right;
@@ -170,6 +220,7 @@ body{
             .timestamp {
                 font-size: 11px;
                 color: #b6b6b6;
+                font-weight: bolder;
             }
         }
 
