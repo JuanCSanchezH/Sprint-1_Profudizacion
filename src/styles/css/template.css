@@ -347,6 +347,54 @@ body {
   background-size: contain;
   margin-right: 30px;
 }
+.main__rightSide__header .offcanvas-header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  height: 80px;
+}
+.main__rightSide__header .offcanvas-header--close {
+  border: none;
+  background: none;
+  width: 35px;
+}
+.main__rightSide__header .offcanvas-header--title {
+  color: white;
+  margin-bottom: 0 !important;
+  margin-left: 15px;
+}
+.main__rightSide__header .offcanvas-body {
+  background: linear-gradient(145deg, rgb(72, 76, 91), rgb(20, 20, 20));
+}
+.main__rightSide__header .offcanvas-body::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+.main__rightSide__header .offcanvas-body::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+.main__rightSide__header .offcanvas-body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgb(79, 79, 79);
+}
+.main__rightSide__header .offcanvas-body__foundMgs {
+  display: flex;
+  flex-direction: column;
+}
+.main__rightSide__header .offcanvas-body__foundMgs .message-search.sent {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  align-self: flex-start;
+  background: linear-gradient(144deg, #2a2a2b, #87878a);
+  box-shadow: 4px 4px 10px #bebebe, -4px -4px 10px #bebebe;
+  text-align: start;
+}
+.main__rightSide__header .offcanvas-body__foundMgs .message-search.sent .timestamp {
+  text-align: center;
+  font-size: 10px;
+  align-self: center;
+}
 .main__rightSide .chat {
   display: flex;
   flex-direction: column; /* Muestra los mensajes de arriba hacia abajo */

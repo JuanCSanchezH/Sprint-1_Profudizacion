@@ -9,6 +9,7 @@ const ENDPOINT_USERS = "http://localhost:3000/users"
 let realResultNum = false;
 let realResultPass = false;
 let userName = "";
+let loggedUsers = [];
 
 
 window.capturarDatos = async function capturarDatos(event) {
@@ -59,15 +60,15 @@ window.capturarDatos = async function capturarDatos(event) {
             } else {
                 if(foundNumber && foundPass){
                     Swal.fire({
-                    title: 'Well done!',
-                    text: `Hi ${userName}, Welcome to Alienverse!`,
-                    icon: 'success',
-                    confirmButtonText: 'Cool'
-                })
-                setTimeout(() => {
-                    location.href="/"
-                  }, 3000);
-                  }
+                        title: 'Well done!',
+                        text: `Hi ${userName}, Welcome to Alienverse!`,
+                        icon: 'success',
+                        confirmButtonText: 'Cool'
+                    })
+                    setTimeout(() => {
+                        location.href="/"
+                    }, 3000);
+                }
             }
         }
     }
@@ -80,7 +81,13 @@ async function findNumPass(phone, password){
         const resultPass = (user.password == password) ?  true : false;
         if(resultNum) realResultNum = resultNum;
         if(resultPass) realResultPass = resultPass;
-        if(resultNum&&resultPass) userName = user.name;
+        if(resultNum&&resultPass){
+            userName = user.name;       
+            loggedUsers.unshift(user)
+            localStorage.setItem ("user", JSON.stringify(loggedUsers))
+            // event.preventDefault();
+        }
+        
     })
     console.log(realResultNum, realResultPass);
     return [realResultNum, realResultPass];

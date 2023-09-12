@@ -180,6 +180,48 @@ body{
                 background-size: contain;
                 margin-right: 30px;
             }
+            .offcanvas-header {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                background: linear-gradient(144deg,#af40ff,#5b42f3 50%,#00ddeb);
+                height: 80px;
+                &--close {
+                    border:none;
+                    background: none;
+                    width: 35px;
+                }
+                &--title {
+                    color:white;
+                    margin-bottom: 0 !important;
+                    margin-left: 15px;
+                }
+
+            }
+            .offcanvas-body {
+                background: linear-gradient(145deg, rgb(72, 76, 91), rgb(20, 20, 20));
+                @include scrollBar();
+                &__foundMgs{
+                    display: flex;
+                    flex-direction: column;
+                    .message-search.sent{
+                        display: flex;
+                        align-items: start;
+                        gap: 10px;
+                        align-self: flex-start;
+                        background: linear-gradient(144deg,#2a2a2b,#87878a);
+                        box-shadow:  4px 4px 10px #bebebe,
+                            -4px -4px 10px #bebebe;
+                        text-align: start;
+                        
+                        .timestamp{
+                            text-align: start;
+                            font-size: 10px;
+                            align-self: center;
+                        }
+                    }
+                }
+            }
         }
         .chat {
             display: flex;

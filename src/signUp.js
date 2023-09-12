@@ -29,7 +29,7 @@ window.catchingData = async function catchingData(event) {  //Se le asigna al ob
 			dateHour: ""
 		}
 
-		await create(element, USERS_ENPOINT);
+		await create(USERS_ENPOINT, element);
 
 		Swal.fire({
 			title: 'Nice!',

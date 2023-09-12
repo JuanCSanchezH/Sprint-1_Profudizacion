@@ -2,15 +2,13 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import './helpers/chat&emojis.js'
 import './styles/css/template.css'
-import './helpers/search&showMessages.js'
-
+// import '../node_modules/sweetalert2/dist/sweetalert2.min.css'
+// import Swal from '../node_modules/sweetalert2/src/sweetalert2.js'
 import {get, create} from './script/api.js';
 const BASE_URL = "http://localhost:3000"
 let myConversation = null;
 
 const userLogged = JSON.parse(localStorage.getItem('user'));
-
-//Función para listar las conversaciones de la persona logueada
 
 async function listConversations(arr) {
     //ya tengo que recibir el arreglo filtrado con los participantes que incluyan mi id
@@ -20,6 +18,7 @@ async function listConversations(arr) {
         // participantes: [idDelOtro, idMio]
         try {
             user = await get(`${BASE_URL}/users/${arr[index].participantes[0]}`);
+            // console.log(user);
         } catch(e) {
             console.log('error', e)
         }
@@ -33,10 +32,6 @@ async function listConversations(arr) {
                         <div class="main__leftSide__chatList__chat__info--sup">
                             <p id="friend-name">${user.name}</p>
                         </div>
-                        <div class="main__leftSide__chatList__chat__info--msg">
-                            <figure><img src="https://res.cloudinary.com/di90urdxw/image/upload/v1693068101/double-tick_2_vanjau.png" width="100%" alt=""></figure>
-                            <p>lorem ipsum</p>
-                        </div>
                     </div>
                 </div>
             `;
@@ -46,15 +41,12 @@ async function listConversations(arr) {
     container[0].innerHTML = html;
 }
 
-// Función para obtener todas las conversaciones de la persona que está logueada
-
 async function getMyConversations() {
     try {
         const myConversations = await get(`${BASE_URL}/conversaciones?participantes_contains=${userLogged[0].id}`);
-        // myLastMsgs = await get(`${BASE_URL}/mensajes`);
-        // const conversationsWithUser = myConversations.filter(conversation => {
-        //     return conversation.participantes.includes(userLogged[0].id);
-        // });
+        const conversationsWithUser = myConversations.filter(conversation => {
+            return conversation.participantes.includes(userLogged[0].id);
+        });
     
         // if (conversationsWithUser.length > 0) {
         //     const lastUserConversation = conversationsWithUser[conversationsWithUser.length - 1];
@@ -67,20 +59,14 @@ async function getMyConversations() {
     }
 }
 
-//Función para crear conversación entre la persona logueada y la persona seleccionada dentro de la lista de conversaciones
-
 window.createConversation = async function createConversation(id){
     try {
-        await create(`${BASE_URL}/conversaciones`, {participantes: [id, userLogged[0].id]});
+        newConversation = await create(`${BASE_URL}/conversaciones`, {participantes: [id, userLogged[0].id]});
         getMyConversations()
     } catch(e) {
         console.log(e);
     }
 } 
-
-// window.filterConv = function filterConv(){
-    
-// }
 
 window.getUsers = async function getUsers() {
     try {
@@ -152,7 +138,7 @@ window.displayMessage = async function displayMessage(){
         // `;
         
         if(item.conversacionId == myConversation.id){
-            // console.log(item.conversacionId, myConversation.id);
+            console.log(item.conversacionId, myConversation.id);
             if (item.usuarioId == myConversation.participantes[1]){
                 html += `
                 <div class="message sent">
@@ -182,9 +168,8 @@ window.displayMessage = async function displayMessage(){
 
 window.getConversationId = async function getConversationId(ID){
     document.getElementById("chat").value = '';
-    document.getElementById("offcanvasRightLabel");
     ID = typeof ID !== 'undefined' ? ID : 1;
-    // console.log(ID);
+    console.log(ID);
     try {
         if(ID){
             myConversation = await get(`${BASE_URL}/conversaciones?participantes_like=${ID}`);
@@ -209,4 +194,3 @@ window.getConversationId = async function getConversationId(ID){
 getMyConversations();
 // getConversationId();
 displayMessage();
-// export const conversation = myConversation;

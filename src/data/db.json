@@ -99,6 +99,13 @@
         2
       ],
       "id": 5
+    },
+    {
+      "participantes": [
+        5,
+        2
+      ],
+      "id": 8
     }
   ],
   "mensajes": [
@@ -157,6 +164,27 @@
       "contenido": "Ya funciona esta vaina",
       "fecha": "2023-09-09T05:29:46.176Z",
       "id": 9
+    },
+    {
+      "conversacionId": 5,
+      "usuarioId": 2,
+      "contenido": "SIIIIIIIIIIIIIIIIIIIIIIII",
+      "fecha": "2023-09-10T19:34:01.531Z",
+      "id": 10
+    },
+    {
+      "conversacionId": 5,
+      "usuarioId": 2,
+      "contenido": "Hola Zaylor!!!!!!!!!",
+      "fecha": "2023-09-12T03:07:52.954Z",
+      "id": 11
+    },
+    {
+      "conversacionId": 5,
+      "usuarioId": 2,
+      "contenido": "este mensaje es nuevo",
+      "fecha": "2023-09-12T03:31:05.430Z",
+      "id": 12
     }
   ]
 }
